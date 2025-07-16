@@ -14,8 +14,8 @@ export const Navigation = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center py-4">
           <div className="flex items-center space-x-2">
-            <div className="w-8 h-8 bg-knight-gradient rounded-lg flex items-center justify-center">
-              <span className="text-white font-orbitron font-bold text-sm">WK</span>
+            <div className="w-8 h-8 rounded-lg flex items-center justify-center">
+              <img src="/lovable-uploads/5c05aafb-df63-44e8-99dc-cbac914a407b.png" alt="WebKnights Logo" className="w-8 h-8 rounded-lg" />
             </div>
             <span className="font-orbitron font-bold text-xl text-knight-blue neon-text">
               WebKnights
@@ -33,8 +33,10 @@ export const Navigation = () => {
             <button onClick={() => scrollTo('technologies')} className="text-white hover:text-knight-blue transition-colors">
               Technologies
             </button>
-            <button onClick={() => scrollTo('join')} className="text-white hover:text-knight-blue transition-colors">
-              Join Guild
+            <button onClick={() => scrollTo('join')} className="knight-button-nav group">
+              <span className="knight-button-inner-nav group-hover:text-knight-blue">
+                ⚔️ Join Guild
+              </span>
             </button>
           </div>
 
@@ -64,8 +66,10 @@ export const Navigation = () => {
               <button onClick={() => scrollTo('technologies')} className="block text-white hover:text-knight-blue transition-colors py-2">
                 Technologies
               </button>
-              <button onClick={() => scrollTo('join')} className="block text-white hover:text-knight-blue transition-colors py-2">
-                Join Guild
+              <button onClick={() => scrollTo('join')} className="knight-button-nav group w-full">
+                <span className="knight-button-inner-nav group-hover:text-knight-blue">
+                  ⚔️ Join Guild
+                </span>
               </button>
             </div>
           </div>

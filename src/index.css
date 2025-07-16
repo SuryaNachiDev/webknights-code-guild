@@ -81,6 +81,14 @@
     @apply bg-knight-dark rounded-md px-6 py-3 font-semibold text-white transition-all duration-300 hover:bg-transparent;
   }
 
+  .knight-button-nav {
+    @apply relative overflow-hidden bg-gradient-to-r from-knight-blue via-knight-purple to-knight-orange p-[1px] rounded-md;
+  }
+  
+  .knight-button-inner-nav {
+    @apply bg-knight-dark rounded-sm px-3 py-1 font-semibold text-white transition-all duration-300 hover:bg-transparent text-sm;
+  }
+
   .tech-grid {
     background-image: 
       linear-gradient(rgba(0, 217, 255, 0.1) 1px, transparent 1px),
