@@ -1,30 +1,418 @@
-
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>WebKnights - Code Like a Warrior</title>
-    <meta name="description" content="WebKnights - FREE 4-week coding program for middle schoolers. Learn web development with high school mentors." />
-    <meta name="author" content="WebKnights" />
+    <meta name="description" content="WebKnights - FREE 4-week coding program for middle schoolers. Learn web development with high school mentors.">
+    <meta name="author" content="WebKnights">
 
-    <meta property="og:title" content="WebKnights - Code Like a Warrior" />
-    <meta property="og:description" content="FREE 4-week coding program for middle schoolers. Learn web development with high school mentors." />
-    <meta property="og:type" content="website" />
-    <meta property="og:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
+    <meta property="og:title" content="WebKnights - Code Like a Warrior">
+    <meta property="og:description" content="FREE 4-week coding program for middle schoolers. Learn web development with high school mentors.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://lovable.dev/opengraph-image-p98pqg.png">
 
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:site" content="@webknights" />
-    <meta name="twitter:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@webknights">
+    <meta name="twitter:image" content="https://lovable.dev/opengraph-image-p98pqg.png">
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Rajdhani:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-  </head>
+    
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="nav-container">
+        <div class="nav-content">
+            <div class="nav-flex">
+                <div class="nav-brand">
+                    <div class="nav-logo">
+                        <img src="public/lovable-uploads/5c05aafb-df63-44e8-99dc-cbac914a407b.png" alt="WebKnights Logo" class="logo-img">
+                    </div>
+                    <span class="brand-text">WebKnights</span>
+                </div>
 
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
-  </body>
+                <!-- Desktop Menu -->
+                <div class="desktop-menu">
+                    <button onclick="scrollTo('hero')" class="nav-button">Home</button>
+                    <button onclick="scrollTo('about')" class="nav-button">About</button>
+                    <button onclick="scrollTo('technologies')" class="nav-button">Technologies</button>
+                    <button onclick="scrollTo('join')" class="knight-button-nav">
+                        <span class="knight-button-inner-nav">⚔️ Join Guild</span>
+                    </button>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-btn" class="mobile-menu-btn">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+
+            <!-- Mobile Menu -->
+            <div id="mobile-menu" class="mobile-menu">
+                <button onclick="scrollTo('hero')" class="mobile-nav-button">Home</button>
+                <button onclick="scrollTo('about')" class="mobile-nav-button">About</button>
+                <button onclick="scrollTo('technologies')" class="mobile-nav-button">Technologies</button>
+                <button onclick="scrollTo('join')" class="knight-button-nav mobile-nav-button">
+                    <span class="knight-button-inner-nav">⚔️ Join Guild</span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero-section">
+        <!-- Background Effects -->
+        <div class="hero-bg"></div>
+        
+        <!-- Floating Particles -->
+        <div class="particles-container" id="particles"></div>
+
+        <div class="hero-content">
+            <!-- Knight Logo -->
+            <div class="hero-logo animate-fade-in-up">
+                <div class="logo-circle">
+                    <div class="logo-inner">
+                        <span class="logo-sword">⚔️</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Main Heading -->
+            <h1 class="hero-title animate-fade-in-up">WebKnights</h1>
+
+            <!-- Tagline -->
+            <h2 class="hero-subtitle animate-fade-in-up">Code Like a Warrior</h2>
+
+            <!-- Description -->
+            <p class="hero-description animate-fade-in-up">
+                Join the guild of digital warriors! WebKnights is a <span class="highlight">FREE 4-week program</span> where 
+                middle schoolers learn web development from experienced high school mentors. No experience required – just bring your curiosity and courage!
+            </p>
+
+            <!-- CTA Buttons -->
+            <div class="hero-buttons animate-fade-in-up">
+                <a href="https://docs.google.com/forms/d/e/1FAIpQLSfavlXcvB5R9tbBl32srTBHH4tCMlsqEr6Qo-3rwwuHWDZTfg/viewform?usp=sf_link" 
+                   target="_blank" 
+                   rel="noopener noreferrer"
+                   class="knight-button">
+                    <span class="knight-button-inner">Join the Guild</span>
+                </a>
+                
+                <button onclick="scrollTo('about')" class="secondary-button">
+                    Learn More
+                </button>
+            </div>
+
+            <!-- Program Info -->
+            <div class="program-info animate-fade-in-up">
+                <div class="info-grid">
+                    <div>
+                        <h3 class="info-title blue">Duration</h3>
+                        <p class="info-text">4 Weeks<br>July 22 - Aug 16</p>
+                    </div>
+                    <div>
+                        <h3 class="info-title orange">Schedule</h3>
+                        <p class="info-text">Mon - Fri<br>11:00AM - 12:00PM</p>
+                    </div>
+                    <div>
+                        <h3 class="info-title purple">Location</h3>
+                        <p class="info-text">Online<br>Google Meet</p>
+                    </div>
+                    <div>
+                        <h3 class="info-title green">Cost</h3>
+                        <p class="info-text cost">100% FREE</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title blue">What is WebKnights?</h2>
+                <p class="section-subtitle">
+                    A unique, hands-on learning experience designed to ignite a passion for technology and creativity in middle school students.
+                </p>
+            </div>
+
+            <div class="about-grid">
+                <!-- Left Content -->
+                <div class="glass-card animate-slide-in-left">
+                    <h3 class="card-title orange">🖥️ Our Mission</h3>
+                    <p class="card-text">
+                        WebKnights pairs knowledgeable high school mentors with eager middle schoolers to teach them 
+                        the fundamentals of web development. By the end of the program, every student will have created 
+                        their own unique and interactive website.
+                    </p>
+                    
+                    <div class="features-list">
+                        <div class="feature">
+                            <div class="feature-dot blue"></div>
+                            <p><span class="feature-label blue">Inclusivity:</span> No previous knowledge required; everyone is welcome!</p>
+                        </div>
+                        <div class="feature">
+                            <div class="feature-dot orange"></div>
+                            <p><span class="feature-label orange">Interactive Learning:</span> Students build their own websites from scratch!</p>
+                        </div>
+                        <div class="feature">
+                            <div class="feature-dot purple"></div>
+                            <p><span class="feature-label purple">Mentorship:</span> Guidance from experienced high schoolers who share a love for coding.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Content -->
+                <div class="glass-card animate-fade-in-up">
+                    <h3 class="card-title blue">👩‍💻 Why Join WebKnights?</h3>
+                    
+                    <div class="benefits-list">
+                        <div class="benefit">
+                            <div class="benefit-icon">💡</div>
+                            <div>
+                                <h4 class="benefit-title blue">Skill Development</h4>
+                                <p class="benefit-text">Learn HTML, CSS, JavaScript, and more in a fun, engaging environment.</p>
+                            </div>
+                        </div>
+
+                        <div class="benefit">
+                            <div class="benefit-icon">🚀</div>
+                            <div>
+                                <h4 class="benefit-title orange">Future Ready</h4>
+                                <p class="benefit-text">Prepare your child for the tech-driven future with essential digital skills.</p>
+                            </div>
+                        </div>
+
+                        <div class="benefit">
+                            <div class="benefit-icon">🤝</div>
+                            <div>
+                                <h4 class="benefit-title purple">Community</h4>
+                                <p class="benefit-text">Make new friends and join a community of young tech enthusiasts.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Technologies Section -->
+    <section id="technologies" class="technologies-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title orange">Technologies You'll Master</h2>
+                <p class="section-subtitle">
+                    Learn the essential tools that power the modern web
+                </p>
+            </div>
+
+            <div class="tech-grid">
+                <div class="tech-card">
+                    <div class="tech-icon" style="color: #E34F26;">🏗️</div>
+                    <h3 class="tech-name">HTML</h3>
+                    <p class="tech-description">Structure and content of web pages</p>
+                    <div class="progress-bar">
+                        <div class="progress-fill" style="width: 100%; background-color: #E34F26;"></div>
+                    </div>
+                </div>
+
+                <div class="tech-card">
+                    <div class="tech-icon" style="color: #1572B6;">🎨</div>
+                    <h3 class="tech-name">CSS</h3>
+                    <p class="tech-description">Styling and layout of websites</p>
+                    <div class="progress-bar">
+                        <div class="progress-fill" style="width: 100%; background-color: #1572B6;"></div>
+                    </div>
+                </div>
+
+                <div class="tech-card">
+                    <div class="tech-icon" style="color: #F7DF1E;">⚡</div>
+                    <h3 class="tech-name">JavaScript</h3>
+                    <p class="tech-description">Interactive functionality and logic</p>
+                    <div class="progress-bar">
+                        <div class="progress-fill" style="width: 100%; background-color: #F7DF1E;"></div>
+                    </div>
+                </div>
+
+                <div class="tech-card">
+                    <div class="tech-icon" style="color: #00D9FF;">🌐</div>
+                    <h3 class="tech-name">Web Design</h3>
+                    <p class="tech-description">User experience and interface design</p>
+                    <div class="progress-bar">
+                        <div class="progress-fill" style="width: 100%; background-color: #00D9FF;"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="additional-info">
+                <h3 class="additional-title">And Much More!</h3>
+                <div class="additional-content">
+                    <div class="additional-item">
+                        <span class="additional-icon">📱</span>
+                        <span>Responsive Design</span>
+                    </div>
+                    <div class="additional-item">
+                        <span class="additional-icon">🎯</span>
+                        <span>Problem Solving</span>
+                    </div>
+                    <div class="additional-item">
+                        <span class="additional-icon">🤝</span>
+                        <span>Collaboration</span>
+                    </div>
+                    <div class="additional-item">
+                        <span class="additional-icon">🚀</span>
+                        <span>Project Deployment</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Join Section -->
+    <section id="join" class="join-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title purple">Join the Guild</h2>
+                <p class="section-subtitle">
+                    Ready to begin your coding quest? Register now and claim your place among the WebKnights!
+                </p>
+            </div>
+
+            <div class="join-grid">
+                <!-- Registration Form -->
+                <div class="glass-card animate-slide-in-left">
+                    <h3 class="card-title blue">🎉 Register Now</h3>
+                    <p class="card-text">
+                        Don't miss out on this fantastic opportunity for your child to learn valuable skills and make new friends. 
+                        Spaces are limited, so register today!
+                    </p>
+                    
+                    <div class="action-buttons">
+                        <a href="https://docs.google.com/forms/d/e/1FAIpQLSfavlXcvB5R9tbBl32srTBHH4tCMlsqEr6Qo-3rwwuHWDZTfg/viewform?usp=sf_link" 
+                           target="_blank" 
+                           rel="noopener noreferrer"
+                           class="knight-button full-width">
+                            <span class="knight-button-inner">⚔️ Start a Chapter</span>
+                        </a>
+
+                        <a href="https://discord.gg/sES9fraH" 
+                           target="_blank" 
+                           rel="noopener noreferrer"
+                           class="discord-button">
+                            <span>💬</span>
+                            <span>Join Discord Server</span>
+                        </a>
+
+                        <div class="contact-info">
+                            <span>✉️</span>
+                            <span>webknights.code@gmail.com</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Program Highlights -->
+                <div class="glass-card animate-fade-in-up">
+                    <h3 class="card-title orange">💡 Program Highlights</h3>
+                    
+                    <div class="timeline">
+                        <div class="timeline-item">
+                            <div class="timeline-number blue">1</div>
+                            <div>
+                                <h4 class="timeline-title blue">Week 1: Foundation</h4>
+                                <p class="timeline-text">HTML basics, structure, and your first webpage</p>
+                            </div>
+                        </div>
+
+                        <div class="timeline-item">
+                            <div class="timeline-number orange">2</div>
+                            <div>
+                                <h4 class="timeline-title orange">Week 2: Styling</h4>
+                                <p class="timeline-text">CSS fundamentals, colors, layouts, and responsive design</p>
+                            </div>
+                        </div>
+
+                        <div class="timeline-item">
+                            <div class="timeline-number purple">3</div>
+                            <div>
+                                <h4 class="timeline-title purple">Week 3: Interactivity</h4>
+                                <p class="timeline-text">JavaScript basics, events, and dynamic content</p>
+                            </div>
+                        </div>
+
+                        <div class="timeline-item">
+                            <div class="timeline-number green">4</div>
+                            <div>
+                                <h4 class="timeline-title green">Week 4: Project</h4>
+                                <p class="timeline-text">Build your final project and deploy it online</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="graduation-badge">
+                        <p>🏆 Every knight will graduate with their own live website!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <!-- Brand -->
+                <div class="footer-brand">
+                    <div class="footer-logo">
+                        <div class="footer-logo-icon">
+                            <span>WK</span>
+                        </div>
+                        <span class="footer-brand-text">WebKnights</span>
+                    </div>
+                    <p class="footer-description">
+                        Forging the next generation of digital warriors through code, creativity, and community.
+                    </p>
+                    <p class="footer-motto">Code Like a Warrior ⚔️</p>
+                </div>
+
+                <!-- Quick Links -->
+                <div class="footer-links">
+                    <h3 class="footer-heading blue">Quick Links</h3>
+                    <div class="footer-nav">
+                        <button onclick="scrollTo('hero')" class="footer-link">Home</button>
+                        <button onclick="scrollTo('about')" class="footer-link">About</button>
+                        <button onclick="scrollTo('technologies')" class="footer-link">Technologies</button>
+                        <button onclick="scrollTo('join')" class="footer-link">Join Guild</button>
+                    </div>
+                </div>
+
+                <!-- Contact -->
+                <div class="footer-contact">
+                    <h3 class="footer-heading orange">Contact Us</h3>
+                    <div class="contact-details">
+                        <p>📧 webknights.code@gmail.com</p>
+                        <div class="social-links">
+                            <a href="https://discord.gg/sES9fraH" target="_blank" rel="noopener noreferrer" class="social-link discord">💬</a>
+                            <a href="https://docs.google.com/forms/d/e/1FAIpQLSfavlXcvB5R9tbBl32srTBHH4tCMlsqEr6Qo-3rwwuHWDZTfg/viewform?usp=sf_link" target="_blank" rel="noopener noreferrer" class="social-link form">📝</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bottom Bar -->
+            <div class="footer-bottom">
+                <p class="copyright">© 2024 WebKnights. Made with ⚔️ for aspiring digital warriors.</p>
+                <p class="program-details">July 22 - August 16 | Mon-Fri 11:00AM-12:00PM | 100% FREE</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
 </html>
