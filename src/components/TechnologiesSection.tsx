@@ -56,11 +56,11 @@ export const TechnologiesSection = () => {
                 {tech.description}
               </p>
               
-              {/* Progress bar simulation */}
+              {/* Progress bar - 100% mastery */}
               <div className="mt-4 bg-knight-gray rounded-full h-2">
                 <div 
                   className={`bg-${tech.color} h-2 rounded-full transition-all duration-1000 delay-500`}
-                  style={{ width: `${70 + Math.random() * 30}%` }}
+                  style={{ width: '100%' }}
                 ></div>
               </div>
             </div>

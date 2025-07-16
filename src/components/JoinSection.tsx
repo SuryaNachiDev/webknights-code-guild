@@ -25,21 +25,22 @@ export const JoinSection = () => {
             
             <div className="space-y-4">
               <a 
-                href="https://forms.gle/MKj3QAncbSzyskg48" 
+                href="https://docs.google.com/forms/d/e/1FAIpQLSfavlXcvB5R9tbBl32srTBHH4tCMlsqEr6Qo-3rwwuHWDZTfg/viewform?usp=sf_link" 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="knight-button group w-full block text-center"
+                className="knight-button group w-full block text-center transform hover:scale-105 transition-all duration-300"
               >
-                <span className="knight-button-inner group-hover:text-knight-blue w-full">
-                  📝 Registration Form
+                <span className="knight-button-inner group-hover:text-knight-blue w-full flex items-center justify-center space-x-2">
+                  <span>⚔️</span>
+                  <span>Start a Chapter</span>
                 </span>
               </a>
 
               <a 
-                href="https://discord.com/invite/hN8JJjFU" 
+                href="https://discord.gg/sES9fraH" 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="w-full px-6 py-3 bg-[#5865F2] hover:bg-[#4752C4] text-white font-semibold rounded-lg transition-colors duration-300 flex items-center justify-center space-x-2"
+                className="w-full px-6 py-3 bg-[#5865F2] hover:bg-[#4752C4] text-white font-semibold rounded-lg transition-colors duration-300 flex items-center justify-center space-x-2 transform hover:scale-105"
               >
                 <span>💬</span>
                 <span>Join Discord Server</span>
