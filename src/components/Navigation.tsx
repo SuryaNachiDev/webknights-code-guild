@@ -14,8 +14,12 @@ export const Navigation = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center py-4">
           <div className="flex items-center space-x-2">
-            <div className="w-8 h-8 bg-knight-gradient rounded-lg flex items-center justify-center">
-              <span className="text-lg font-orbitron font-black text-knight-dark">⚔️</span>
+            <div className="w-8 h-8 rounded-lg flex items-center justify-center overflow-hidden">
+              <img 
+                src="/lovable-uploads/5c05aafb-df63-44e8-99dc-cbac914a407b.png" 
+                alt="WebKnights Logo" 
+                className="w-8 h-8 object-cover rounded-lg" 
+              />
             </div>
             <span className="font-orbitron font-bold text-xl text-knight-blue neon-text">
               WebKnights
