@@ -14,12 +14,20 @@ export const Navigation = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center py-4">
           <div className="flex items-center space-x-2">
-            <div className="w-8 h-8 rounded-lg flex items-center justify-center overflow-hidden">
-              <img 
-                src="/lovable-uploads/5c05aafb-df63-44e8-99dc-cbac914a407b.png" 
-                alt="WebKnights Logo" 
-                className="w-8 h-8 object-cover rounded-lg" 
-              />
+            <div className="w-8 h-8 rounded-lg flex items-center justify-center overflow-hidden bg-knight-gradient p-[1px]">
+              <div className="w-full h-full bg-knight-dark rounded-lg flex items-center justify-center overflow-hidden">
+                <img 
+                  src="/lovable-uploads/5c05aafb-df63-44e8-99dc-cbac914a407b.png" 
+                  alt="WebKnights Logo" 
+                  className="w-7 h-7 object-cover rounded-sm" 
+                  loading="eager"
+                  onError={(e) => {
+                    const target = e.target as HTMLImageElement;
+                    target.style.display = 'none';
+                    target.parentElement!.innerHTML = '<span class="text-knight-blue text-lg">⚔️</span>';
+                  }}
+                />
+              </div>
             </div>
             <span className="font-orbitron font-bold text-xl text-knight-blue neon-text">
               WebKnights
