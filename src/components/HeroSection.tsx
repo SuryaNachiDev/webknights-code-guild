@@ -54,7 +54,7 @@ export const HeroSection = () => {
         {/* CTA Buttons */}
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center animate-fade-in-up" style={{ animationDelay: '0.8s' }}>
           <a 
-            href="https://forms.gle/MKj3QAncbSzyskg48" 
+            href="https://docs.google.com/forms/d/e/1FAIpQLSfavlXcvB5R9tbBl32srTBHH4tCMlsqEr6Qo-3rwwuHWDZTfg/viewform?usp=sf_link" 
             target="_blank" 
             rel="noopener noreferrer"
             className="knight-button group"
