@@ -45,6 +45,13 @@
     --sidebar-accent-foreground: 0 0% 98%;
     --sidebar-border: 0 0% 20%;
     --sidebar-ring: 197 100% 50%;
+
+    /* Custom WebKnights colors */
+    --knight-blue: 197 100% 50%;
+    --knight-orange: 24 100% 50%;
+    --knight-purple: 262 83% 68%;
+    --knight-dark: 5 5% 4%;
+    --knight-darker: 5 5% 2%;
   }
 }
 
@@ -89,10 +96,56 @@
     @apply bg-knight-dark rounded-sm px-3 py-1 font-semibold text-white transition-all duration-300 hover:bg-transparent text-sm;
   }
 
+  .knight-gradient {
+    @apply bg-gradient-to-r from-knight-blue via-knight-purple to-knight-orange;
+  }
+
   .tech-grid {
     background-image: 
       linear-gradient(rgba(0, 217, 255, 0.1) 1px, transparent 1px),
       linear-gradient(90deg, rgba(0, 217, 255, 0.1) 1px, transparent 1px);
     background-size: 50px 50px;
+  }
+}
+
+@layer utilities {
+  .knight-blue {
+    color: hsl(var(--knight-blue));
+  }
+  
+  .knight-orange {
+    color: hsl(var(--knight-orange));
+  }
+  
+  .knight-purple {
+    color: hsl(var(--knight-purple));
+  }
+  
+  .knight-dark {
+    color: hsl(var(--knight-dark));
+  }
+  
+  .knight-darker {
+    color: hsl(var(--knight-darker));
+  }
+  
+  .bg-knight-blue {
+    background-color: hsl(var(--knight-blue));
+  }
+  
+  .bg-knight-orange {
+    background-color: hsl(var(--knight-orange));
+  }
+  
+  .bg-knight-purple {
+    background-color: hsl(var(--knight-purple));
+  }
+  
+  .bg-knight-dark {
+    background-color: hsl(var(--knight-dark));
+  }
+  
+  .bg-knight-darker {
+    background-color: hsl(var(--knight-darker));
   }
 }
